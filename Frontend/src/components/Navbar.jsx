@@ -1,7 +1,11 @@
 import React from 'react'
 import '../App.css'
 import { MdAddTask } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
+
 const Navbar = () => {
+
+const navigate = useNavigate()
   return (
     <div className='flex justify-between items-center h-16 bg-white text-black relative shadow-sm roboto tracking-wide'>
       <div className='pl-14 flex gap-1 items-center cursor-pointer' >
@@ -18,8 +22,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className='pr-10 cursor-pointer flex gap-6'>
-        <button>Login</button>
-        <button className='bg-purple-600 text-white p-2 rounded-xl'>Signup</button>
+        <button onClick={()=>navigate('/login')}>Login</button>
+        <button onClick={()=>navigate('/register')} className='bg-purple-600 text-white p-2 rounded-xl'>Signup</button>
       </div>
     </div>
   )

@@ -55,7 +55,7 @@ const Dashboard = () => {
         {
           projects.map((project,index)=>{
             return(
-              <div className='flex flex-col gap-4 border border-slate-300 rounded p-3 w-52 hover:bg-slate-200 transition'
+              <div className='flex bg-slate-500 flex-col gap-4 border border-slate-300 rounded p-3 w-52 hover:bg-slate-200 transition'
               onClick={()=>navigate(`/project`,{
                 state:{project}
               })}

@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 import { UserContext } from '../context/user.context.jsx';
+import login3d from '../assets/login3.png'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -36,7 +37,7 @@ const Login = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-gray-900 flex justify-center items-center">
+    <div className="fixed top-0 left-0 w-full h-full flex justify-between bg-gray-100 items-center">
         <Toaster
   position="top-center"
   reverseOrder={false}
@@ -74,6 +75,9 @@ const Login = () => {
             Don't have an account? <Link to="/register" className="text-blue-500 hover:text-blue-700">Register</Link>
           </p>
         </form>
+      </div>
+      <div className='flex justify-center items-center'>
+        <img className='w-[800px] h-[800px]' src={login3d} alt="" />
       </div>
     </div>
   );
