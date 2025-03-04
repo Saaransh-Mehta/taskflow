@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { FaArrowRight } from "react-icons/fa";
+import homeImg from '../assets/homeImg.png'
 import "../App.css";
+import { motion } from "motion/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import laptop from '../assets/laptopImg.png'
-import data from '../assets/dataimg.png'
-import { ChevronRight } from "lucide-react"
+import laptop from "../assets/laptopImg.png";
+import data from "../assets/dataimg.png";
+import { ChevronRight } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -55,7 +57,8 @@ const Home = () => {
         <div className="middle-low-text">
           <div className="flex justify-center mt-4">
             <div className="lilita-one text-lg">
-              Built to create a stress-free task management. Use more. Pay less. Do more.
+              Built to create a stress-free task management. Use more. Pay less.
+              Do more.
             </div>
           </div>
           <div className="buttons flex justify-center gap-5 mt-10">
@@ -69,22 +72,30 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center h-screen section" data-color="#014643">
+      <div
+        className="flex justify-center items-center h-screen section"
+        data-color="#014643"
+      >
         <div className="flex justify-center items-center flex-col">
           <img className={`w-[1000px] h-[1000px]`} src={laptop} alt="" />
         </div>
       </div>
       <div className="min-h-screen bg-[#014643]">
-          <div className="top flex justify-center items-center flex-col mt-20">
-            <span className="text-5xl nunito font-semibold text-white">What Can You Expect To Recieve</span>
-            <span className="text-5xl nunito text-white">From Our Platform</span>
-          </div>
-          <div className="middle flex justify-center items-center mt-20 flex-col">
-              <span className="text-2xl roboto text-white font-light">Connect TaskFlow to your favorite tools and apps for a seamless experience</span>
-          </div>
-          <div className="image flex justify-center items-center flex-col">
-            <img className="w-[900px] h-[900px]" src={data} alt="" />
-          </div>
+        <div className="top flex justify-center items-center flex-col mt-20">
+          <span className="text-5xl nunito font-semibold text-white">
+            What Can You Expect To Recieve
+          </span>
+          <span className="text-5xl nunito text-white">From Our Platform</span>
+        </div>
+        <div className="middle flex justify-center items-center mt-20 flex-col">
+          <span className="text-2xl roboto text-white font-light">
+            Connect TaskFlow to your favorite tools and apps for a seamless
+            experience
+          </span>
+        </div>
+        <div className="image flex justify-center items-center flex-col">
+          <img className="w-[900px] h-[900px]" src={data} alt="" />
+        </div>
       </div>
       <div className="min-h-screen bg-white">
         <div className="top">
@@ -92,100 +103,442 @@ const Home = () => {
             Explore Our Amazing Features
           </span>
           <div className="flex justify-center items-center flex-col pt-10">
-
-          <span>
-            with Taskflow, you can easily manage your tasks, projects and team members. You can create tasks, assign them to team members and track their progress.
-          </span>
+            <span>
+              with Taskflow, you can easily manage your tasks, projects and team
+              members. You can create tasks, assign them to team members and
+              track their progress.
+            </span>
           </div>
         </div>
-        <div className="middle grid place-content-center pt-10">
-            <div className="grid grid-cols-2 gap-10">
-            <div className="max-w-sm rounded-xl bg-white p-6 shadow-sm">
-      <div className="mb-4">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#00483c]">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-white"
-          >
-            <path
-              d="M8 18L12 18L12 6L8 6L8 18Z"
-              fill="white"
-              stroke="white"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M16 18L20 18L20 10L16 10L16 18Z"
-              fill="white"
-              stroke="white"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path d="M4 18H4.01" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
-      </div>
-      <h3 className="mb-2 text-lg font-medium text-gray-900">Advanced Analytics</h3>
-      <p className="mb-6 text-sm text-gray-600">
-        With our AI-based analytics, you will be able to understand your user behaviour as if you were directly talking
-        with them.
-      </p>
-      <div className="flex justify-end">
-        <button className="flex h-8 w-8 items-center justify-center rounded-full bg-[#7c3aed] text-white">
-          <ChevronRight size={16} />
-        </button>
-      </div>
-    </div>
-    <div className="max-w-sm rounded-xl bg-white p-6 shadow-sm">
-      <div className="mb-4">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#00483c]">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-white"
-          >
-            <path
-              d="M8 18L12 18L12 6L8 6L8 18Z"
-              fill="white"
-              stroke="white"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M16 18L20 18L20 10L16 10L16 18Z"
-              fill="white"
-              stroke="white"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path d="M4 18H4.01" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
-      </div>
-      <h3 className="mb-2 text-lg font-medium text-gray-900">Advanced Analytics</h3>
-      <p className="mb-6 text-sm text-gray-600">
-        With our AI-based analytics, you will be able to understand your user behaviour as if you were directly talking
-        with them.
-      </p>
-      <div className="flex justify-end">
-        <button className="flex h-8 w-8 items-center justify-center rounded-full bg-[#7c3aed] text-white">
-          <ChevronRight size={16} />
-        </button>
-      </div>
-    </div>
+        <div className="middle grid place-content-center pt-10 gap-10">
+          <div className="grid grid-cols-2 gap-10">
+            <div className="max-w-sm rounded-xl bg-white p-6 shadow-sm hover:shadow-xl cursor-pointer">
+              <div className="mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#00483c]">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="text-white"
+                  >
+                    <path
+                      d="M8 18L12 18L12 6L8 6L8 18Z"
+                      fill="white"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M16 18L20 18L20 10L16 10L16 18Z"
+                      fill="white"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M4 18H4.01"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="mb-2 text-lg font-medium text-gray-900 poppins">
+                Advanced Analytics
+              </h3>
+              <p className="mb-6 text-sm text-gray-600">
+                With our AI-based analytics, you will be able to understand your
+                user behaviour as if you were directly talking with them.
+              </p>
+              <div className="flex justify-end">
+                <motion.button
+                  initial={{ scale: 1 }}
+                  whileHover={{ scale: 1.2, z: 1 }}
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-[#7c3aed] text-white shadow-sm hover:shadow-2xl"
+                >
+                  <ChevronRight size={16} />
+                </motion.button>
+              </div>
             </div>
+            <div className="max-w-sm rounded-xl bg-white p-6 shadow-sm hover:shadow-xl cursor-pointer">
+              <div className="mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#00483c]">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="text-white"
+                  >
+                    <path
+                      d="M8 18L12 18L12 6L8 6L8 18Z"
+                      fill="white"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M16 18L20 18L20 10L16 10L16 18Z"
+                      fill="white"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M4 18H4.01"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="mb-2 text-lg font-medium text-gray-900 poppins">
+                Advanced Analytics
+              </h3>
+              <p className="mb-6 text-sm text-gray-600">
+                With our AI-based analytics, you will be able to understand your
+                user behaviour as if you were directly talking with them.
+              </p>
+              <div className="flex justify-end">
+                <button className="flex h-8 w-8 items-center justify-center rounded-full bg-[#7c3aed] text-white">
+                  <ChevronRight size={16} />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-5">
+            <div className="max-w-sm rounded-xl bg-white p-6 shadow-sm hover:shadow-xl cursor-pointer">
+              <div className="mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#00483c]">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="text-white"
+                  >
+                    <path
+                      d="M8 18L12 18L12 6L8 6L8 18Z"
+                      fill="white"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M16 18L20 18L20 10L16 10L16 18Z"
+                      fill="white"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M4 18H4.01"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="mb-2 text-lg font-medium text-gray-900 poppins ">
+                Advanced Analytics
+              </h3>
+              <p className="mb-6 text-sm text-gray-600">
+                With our AI-based analytics, you will be able to understand your
+                user behaviour as if you were directly talking with them.
+              </p>
+              <div className="flex justify-end">
+                <button className="flex h-8 w-8 items-center justify-center rounded-full bg-[#7c3aed] text-white">
+                  <ChevronRight size={16} />
+                </button>
+              </div>
+            </div>
+            <div className="max-w-sm rounded-xl bg-white p-6 shadow-sm hover:shadow-xl cursor-pointer">
+              <div className="mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#00483c]">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="text-white"
+                  >
+                    <path
+                      d="M8 18L12 18L12 6L8 6L8 18Z"
+                      fill="white"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M16 18L20 18L20 10L16 10L16 18Z"
+                      fill="white"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M4 18H4.01"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="mb-2 text-lg font-medium text-gray-900">
+                Advanced Analytics
+              </h3>
+              <p className="mb-6 text-sm text-gray-600">
+                With our AI-based analytics, you will be able to understand your
+                user behaviour as if you were directly talking with them.
+              </p>
+              <div className="flex justify-end">
+                <button className="flex h-8 w-8 items-center justify-center rounded-full bg-[#7c3aed] text-white">
+                  <ChevronRight size={16} />
+                </button>
+              </div>
+            </div>
+            <div className="max-w-sm rounded-xl bg-white p-6 shadow-sm hover:shadow-xl cursor-pointer">
+              <div className="mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#00483c]">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="text-white"
+                  >
+                    <path
+                      d="M8 18L12 18L12 6L8 6L8 18Z"
+                      fill="white"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M16 18L20 18L20 10L16 10L16 18Z"
+                      fill="white"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M4 18H4.01"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="mb-2 text-lg font-medium text-gray-900">
+                Advanced Analytics
+              </h3>
+              <p className="mb-6 text-sm text-gray-600">
+                With our AI-based analytics, you will be able to understand your
+                user behaviour as if you were directly talking with them.
+              </p>
+              <div className="flex justify-end">
+                <button className="flex h-8 w-8 items-center justify-center rounded-full bg-[#7c3aed] text-white">
+                  <ChevronRight size={16} />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div className="min-h-screen bg-white">
+        <div className="pricing">
+          <div className="pricing-top pt-10 flex flex-col justify-center">
+            <div className="flex justify-center">
+              <h1 className="poppins text-4xl font-semibold ">
+                Choose Your Plan
+              </h1>
+            </div>
+            <div className="flex justify-center pt-5 opacity-80">
+              <p className="poppins">
+                Our pricing plans are designed to be affordable, flexible ,
+                andtailored to your unique needs.
+              </p>
+            </div>
+          </div>
+          <div className="pricing-section pt-5">
+            <div className="card-section flex justify-center gap-5">
+              <div className="card-1 h-[70vh] w-52 rounded  ">
+                <div className="small-card bg-gray-100 flex justify-center h-[20%] items-center rounded-xl ">
+                  <div className="card-top">
+                    <h1 className="poppins font-semibold">Have Question ?</h1>
+                    <p className="poppins text-xs text-purple-500">
+                      Contact Us Now!
+                    </p>
+                  </div>
+                </div>
+                <div className="lower-card h-[80%] bg-green-100 rounded-xl mt-2">
+                  <ul className="flex flex-col  gap-5 pt-3 justify-center items-center pb-3 ">
+                    <li className="text-green-900">Website Analytics</li>
+                    <li className="text-green-900">Data Workspace</li>
+                    <li className="text-green-900">Custom Branding</li>
+                    <li className="text-green-900">Tracked User</li>
+                    <li className="text-green-900">AI Powered Features</li>
+                    <li className="text-green-900">Custom Report</li>
+                    <li className="text-green-900">Web App Analytics</li>
+                    <li className="text-green-900">Mobile App Analytics</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="card-1 h-[70vh] w-52 rounded shadow-sm ">
+                <div className="small-card bg-gray-100 flex justify-center h-[20%] items-center rounded-xl">
+                  <div className="card-top">
+                    <h1 className="poppins text-sm font-semibold">STARTER</h1>
+                    <p className="poppins text-2xl font-bold">
+                      $29 <span className="text-xs opacity-50">/Month</span>
+                    </p>
+                    <button className="poppins bg-[#7c3aed] text-white text-xs p-2 rounded-xl">
+                      Start Free Trial
+                    </button>
+                  </div>
+                </div>
+                <div className="lower-card h-[80%]  rounded-xl mt-2">
+                  <ul className="flex flex-col  gap-5 pt-3 justify-center items-center pb-3 ">
+                    <li className="">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="50" cy="50" r="50" fill="purple" />
+                        <path
+                          d="M30 50 L45 65 L70 35"
+                          stroke="white"
+                          stroke-width="8"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </li>
+                    <li className="">
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="50" cy="50" r="50" fill="purple" />
+                        <path
+                          d="M30 50 L45 65 L70 35"
+                          stroke="white"
+                          stroke-width="8"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </li>
+                    <li className="">
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="50" cy="50" r="50" fill="purple" />
+                        <path
+                          d="M30 50 L45 65 L70 35"
+                          stroke="white"
+                          stroke-width="8"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </li>
+                    <li className="">
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="50" cy="50" r="50" fill="purple" />
+                        <path
+                          d="M30 50 L45 65 L70 35"
+                          stroke="white"
+                          stroke-width="8"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </li>
+                    <li className=""></li>
+                    <li className=""></li>
+                    <li className=""></li>
+                    <li className=""></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="card-1 h-[70vh] w-52 rounded shadow-sm border-2 ">
+                <div className="small-card bg-gray-100 flex justify-center">
+                  <div className="card-top">
+                    <h1 className="poppins">Have Question ?</h1>
+                    <p className="poppins">Contact Us Now!</p>
+                  </div>
+                </div>
+              </div>
+              <div className="card-1 h-[70vh] w-52 rounded shadow-sm border-2 ">
+                <div className="small-card bg-gray-100 flex justify-center">
+                  <div className="card-top">
+                    <h1 className="poppins">Have Question ?</h1>
+                    <p className="poppins">Contact Us Now!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="min-h-screen bg-white">
+        <div className="flex justify-center relative">
+        <img className="w-[820px]" src={homeImg} alt="" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center ">
+            <span className="text-2xl poppins font-bold">
+              Integrated with 100+ Tools You
+            </span>
+            <span className="text-2xl poppins font-bold">
+              Already Know & Love.
+            </span>
+            <button className="text-white poppins text-sm bg-purple-500 p-3 mt-2 rounded-xl">View All Integrations</button>
+          </div>
+        </div>
+      </div>
+      <div className="min-h-screen">
+
       </div>
     </>
   );
