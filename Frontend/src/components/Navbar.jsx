@@ -14,7 +14,7 @@ const navigate = useNavigate()
       </div>
       <div className='cursor-pointer '>
         <ul className='flex gap-5'>
-          <li className='pr-2'>Features</li>
+          <li className='pr-2' onClick={()=>navigate('/features')}>Features</li>
           <li>Pricing </li>
           <li>Resources</li>
           <li>About</li>

@@ -9,6 +9,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import laptop from "../assets/laptopImg.png";
 import data from "../assets/dataimg.png";
 import { ChevronRight } from "lucide-react";
+import Accordion from "../components/Accordian";
+import Footer from "../components/Footer";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -42,7 +44,7 @@ const Home = () => {
             <span className="bg-green-200 roboto tracking-wide text-green-900 text-xs font-medium me-2 px-2.5 py-0.5 rounded-lg">
               Updated
             </span>
-            <span className="text-sm flex items-center gap-3 roboto tracking-wide">
+            <span className="text-sm flex items-center gap-3 roboto tracking-wide cursor-pointer">
               New Version of TaskFlow is here <FaArrowRight />
             </span>
           </div>
@@ -538,7 +540,54 @@ const Home = () => {
         </div>
       </div>
       <div className="min-h-screen">
+          <div className="top-section flex flex-col justify-center items-center gap-2 pt-20">
+            <span className="text-4xl poppins font-bold text-white">Real People, Real Results.</span>
+            <span className="text-4xl poppins font-bold text-white">Hear It From Our Customers</span>
+            <span className="text-sm pt-12 text-white/70 poppins">Don't take our word for it . See what our customer say.</span>
+          </div>
+          <div className="bottom-section">
+              <div className="card-section flex justify-center gap-5">
+                <div className="card-1">
+                    <div>
 
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div className="min-h-screen bg-white">
+        <div className="question-section pl-56 pr-56 pt-20 flex flex-row items-center justify-between">
+            <div className="left-section flex flex-col">
+                <span className="text-bold poppins text-4xl">Frequently Asked</span>
+                <span className="text-bold poppins text-4xl">Questions</span>
+                <span className="text-sm text-black pt-5">We have put together some commonly</span>
+                <span className="text-sm text-black ">asked question</span>
+                <button className="text-sm bg-purple-500 text-white p-3 mt-2 rounded-xl">Contact Us</button>
+            </div>
+            <div className="right-section">
+                <div className="card-accordian">
+                    <div className="accordian-top">
+                        <Accordion/>
+                    </div>  
+                
+                </div>      
+
+            </div>
+        </div>
+      </div>
+      <div className="min-h-[80vh] bg-white flex justify-center items-center">
+              <div className="min-h-[50vh] bg-[#00483c] w-[70%] rounded-3xl flex flex-col gap-5 justify-center items-center shadow-xl">
+                <span className="text-3xl poppins text-bold text-white">Get Started With TaskFlow Right Now!</span>
+                <span className="text-sm poppins text-bold text-white">Let our tool do the tasking. Try it out right now free.</span>
+                <motion.button 
+                initial={{size:1}}
+                whileHover={{scale:1.1}}
+                whileTap={{scale:0.9}}
+                className="rounded-full bg-purple-500 text-sm p-4 poppins text-white">Start Free Trail</motion.button>
+              </div>
+      </div>
+      <div className="footer">
+          <Footer/>
       </div>
     </>
   );
