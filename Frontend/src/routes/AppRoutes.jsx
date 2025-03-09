@@ -7,7 +7,8 @@ import Project from '../screens/Project'
 import UserAuth from '../auth/UserAuth'
 import Home from '../screens/Home'
 import Features from '../screens/Features'
-
+import Blogs from '../screens/Blogs'
+import ProjectDashboard from '../screens/ProjectDashboard'
 
 const AppRoutes = () => {
   return (
@@ -19,6 +20,8 @@ const AppRoutes = () => {
     <Route path="/register" element={<Register/>} />
     <Route path='/project' element={<UserAuth> <Project/> </UserAuth> }/>
     <Route path='/features' element={<Features/>} />
+    <Route path='/blogs' element={<Blogs/>} />
+    <Route path='/project-dashboard' element={<ProjectDashboard/>} />
 
 
     </Routes>
