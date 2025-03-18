@@ -44,34 +44,47 @@ const Dashboard = () => {
   };
 
   return (
-    <main className="p-4">
+    <main className="p-4 ">
       <Toaster position='top-center'/>
       <div className="projects gap-5 ">
-        <button className="project border  border-slate-300 rounded p-3" onClick={() => setModal(true)}>
+        <button className="project border  bg- border-slate-300 rounded p-3 text-black" onClick={() => setModal(true)}>
           New Project
           <i className="p-1 ri-link"></i>
         </button>
+        <div className='flex gap-10 mt-6'>
 
         {
           projects.map((project,index)=>{
+            // console.log(project)
             return(
-              <div className='flex  flex-col gap-4 border border-slate-300 rounded p-3 w-52 hover:bg-slate-200 transition'
-              onClick={()=>navigate(`/project`,{
+              <div className='flex  flex-col gap-4 border border-slate-300 rounded p-3 w-[500px] h-[400px] text-black hover:bg-slate-200 transition'
+              onClick={()=>navigate(`/project-dashboard`,{
                 state:{project}
               })}
               >
-              <button key={index} className="project">
-                {project.name}
-                <i className="p-1 ri-link"></i>
-              </button>
-              <div className='flex gap-2'>
-                     <p><i className="ri-user-line"></i> Collaborators: {project.users.length}
-                       </p>
+             <div className='card flex flex-col justify-center'>
+                <div className="card-top flex justify-between ">
+                  <div>
+
+                  <h1 className='text-2xl poppins font-semibold'>{project.name.toUpperCase()}</h1>
+                  </div>
+               
+                <div className="badge">
+                <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-blue-400 border border-blue-400">in Progress</span>
+                </div>
+                </div>
+              <div className="card-middle">
+                <div className="card-desc text-sm poppins text-black/60 pt-4">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat numquam iure dolorem laudantium beatae iste. Natus nemo harum ullam nulla?
+                </div>
               </div>
+
+             </div>
             </div>
             )
           })
         }
+        </div>
       </div>
       {modal && (
         <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 flex justify-center items-center" onClick={handleCloseModal}>

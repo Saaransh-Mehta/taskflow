@@ -4,7 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 import { UserContext } from '../context/user.context.jsx';
-import login3d from '../assets/login3.png'
+import login3d from '../assets/loginPage.png'
+// import {Button} from '../lib/components/ui/button.js'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -37,26 +38,26 @@ const Login = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex justify-between bg-gray-100 items-center">
+    <div className="fixed top-0 left-0 w-full h-full flex justify-center bg-gray-100 items-center">
         <Toaster
   position="top-center"
   reverseOrder={false}
 />
-      <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-1/2">
-        <h2 className="text-2xl text-white font-bold mb-4">Login</h2>
+      <div className=" p-8 rounded-lg shadow-lg w-1/2">
+        <h2 className="text-2xl text-black poppins font-bold mb-4">Hello, <br/> Welcome Back</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col space-y-2">
-            <label className="text-white" htmlFor="email">Email</label>
+            <label className="text-black poppins" htmlFor="email">Email</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="bg-gray-700 p-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
+              className="bg-gray-700 poppins p-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
             />
           </div>
           <div className="flex flex-col space-y-2">
-            <label className="text-white" htmlFor="password">Password</label>
+            <label className="text-black poppins" htmlFor="password">Password</label>
             <input
               type="password"
               value={password}
@@ -69,16 +70,14 @@ const Login = () => {
             type="submit"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
           >
-            Login
+         Login
           </button>
-          <p className="text-white">
-            Don't have an account? <Link to="/register" className="text-blue-500 hover:text-blue-700">Register</Link>
+          <p className="text-black poppins">
+            Don't have an account? <Link to="/register" className="text-blue-500 hover:text-blue-700 bold">Register</Link>
           </p>
         </form>
       </div>
-      <div className='flex justify-center items-center'>
-        <img className='w-[800px] h-[800px]' src={login3d} alt="" />
-      </div>
+      
     </div>
   );
 };

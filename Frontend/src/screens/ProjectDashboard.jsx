@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { motion } from 'motion/react'
+import { UserContext } from '../context/user.context.jsx'
+
 
 const ProjectDashboard = () => {
+
+  const {user} = useContext(UserContext)
+
   const [activeTab, setActiveTab] = useState('Overview')
   const [tasks, setTasks] = useState({
     todo: [
@@ -36,7 +41,7 @@ const ProjectDashboard = () => {
     role: ''
   })
 
-  // Load data from localStorage on component mount
+ 
   useEffect(() => {
     const savedTasks = localStorage.getItem('projectTasks');
     const savedTeamMembers = localStorage.getItem('projectTeamMembers');
@@ -50,7 +55,7 @@ const ProjectDashboard = () => {
     }
   }, []);
 
-  // Save data to localStorage whenever it changes
+  
   useEffect(() => {
     localStorage.setItem('projectTasks', JSON.stringify(tasks));
   }, [tasks]);
@@ -165,9 +170,9 @@ const ProjectDashboard = () => {
               </button>
             </div>
             
-            {/* Task Columns */}
+          
             <div className="grid grid-cols-3 gap-6">
-              {/* To Do Tasks */}
+            
               <div className="bg-white p-4 rounded-lg shadow">
                 <h2 className="text-xl font-semibold mb-4">To Do</h2>
                 <div className="space-y-4">
@@ -205,7 +210,7 @@ const ProjectDashboard = () => {
                 </div>
               </div>
 
-              {/* Ongoing Tasks */}
+             
               <div className="bg-white p-4 rounded-lg shadow">
                 <h2 className="text-xl font-semibold mb-4">Ongoing</h2>
                 <div className="space-y-4">

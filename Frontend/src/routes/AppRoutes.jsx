@@ -9,11 +9,14 @@ import Home from '../screens/Home'
 import Features from '../screens/Features'
 import Blogs from '../screens/Blogs'
 import ProjectDashboard from '../screens/ProjectDashboard'
+import Navbar from '../components/Navbar'
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
+    <Navbar/>
     <Routes>
+      
       <Route path="/" element={<Home/>} />
     <Route path="/dashboard" element={<UserAuth><Dashboard/></UserAuth>} />
     <Route path="/login" element={<Login />} />

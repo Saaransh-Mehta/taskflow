@@ -36,7 +36,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
+     
 
       <div className="flex justify-center section" data-color="#ffffff">
         <div className="top">
@@ -44,7 +44,7 @@ const Home = () => {
             <span className="bg-green-200 roboto tracking-wide text-green-900 text-xs font-medium me-2 px-2.5 py-0.5 rounded-lg">
               Updated
             </span>
-            <span className="text-sm flex items-center gap-3 roboto tracking-wide cursor-pointer">
+            <span className="text-sm flex items-center gap-3 roboto tracking-wide cursor-pointer text-black/70">
               New Version of TaskFlow is here <FaArrowRight />
             </span>
           </div>
@@ -53,12 +53,12 @@ const Home = () => {
 
       <div className="middle section" data-color="#f0f0f0">
         <div className="flex justify-center items-center mt-20 flex-col">
-          <span className="text-7xl lilita-one">Project Management ,</span>
-          <span className="text-7xl lilita-one">Made Simple</span>
+          <span className="text-7xl lilita-one text-black">Project Management ,</span>
+          <span className="text-7xl lilita-one text-black">Made Simple</span>
         </div>
         <div className="middle-low-text">
           <div className="flex justify-center mt-4">
-            <div className="lilita-one text-lg">
+            <div className="lilita-one text-lg text-black/70">
               Built to create a stress-free task management. Use more. Pay less.
               Do more.
             </div>
@@ -377,12 +377,12 @@ const Home = () => {
         <div className="pricing">
           <div className="pricing-top pt-10 flex flex-col justify-center">
             <div className="flex justify-center">
-              <h1 className="poppins text-4xl font-semibold ">
+              <h1 className="poppins text-4xl font-semibold text-black ">
                 Choose Your Plan
               </h1>
             </div>
             <div className="flex justify-center pt-5 opacity-80">
-              <p className="poppins">
+              <p className="poppins text-black">
                 Our pricing plans are designed to be affordable, flexible ,
                 andtailored to your unique needs.
               </p>
@@ -393,7 +393,7 @@ const Home = () => {
               <div className="card-1 h-[70vh] w-52 rounded  ">
                 <div className="small-card bg-gray-100 flex justify-center h-[20%] items-center rounded-xl ">
                   <div className="card-top">
-                    <h1 className="poppins font-semibold">Have Question ?</h1>
+                    <h1 className="poppins font-semibold text-black">Have Question ?</h1>
                     <p className="poppins text-xs text-purple-500">
                       Contact Us Now!
                     </p>
@@ -415,11 +415,11 @@ const Home = () => {
               <div className="card-1 h-[70vh] w-52 rounded shadow-sm ">
                 <div className="small-card bg-gray-100 flex justify-center h-[20%] items-center rounded-xl">
                   <div className="card-top">
-                    <h1 className="poppins text-sm font-semibold">STARTER</h1>
-                    <p className="poppins text-2xl font-bold">
-                      $29 <span className="text-xs opacity-50">/Month</span>
+                    <h1 className="poppins text-sm font-semibold text-black">STARTER</h1>
+                    <p className="poppins text-2xl font-bold text-black">
+                      $29 <span className="text-xs opacity-50 text-black">/Month</span>
                     </p>
-                    <button className="poppins bg-[#7c3aed] text-white text-xs p-2 rounded-xl">
+                    <button className="poppins bg-[#7c3aed] text-white text-xs p-2 rounded-xl ">
                       Start Free Trial
                     </button>
                   </div>
@@ -508,16 +508,16 @@ const Home = () => {
               <div className="card-1 h-[70vh] w-52 rounded shadow-sm border-2 ">
                 <div className="small-card bg-gray-100 flex justify-center">
                   <div className="card-top">
-                    <h1 className="poppins">Have Question ?</h1>
-                    <p className="poppins">Contact Us Now!</p>
+                    <h1 className="poppins text-black">Have Question ?</h1>
+                    <p className="poppins text-black">Contact Us Now!</p>
                   </div>
                 </div>
               </div>
               <div className="card-1 h-[70vh] w-52 rounded shadow-sm border-2 ">
                 <div className="small-card bg-gray-100 flex justify-center">
                   <div className="card-top">
-                    <h1 className="poppins">Have Question ?</h1>
-                    <p className="poppins">Contact Us Now!</p>
+                    <h1 className="poppins text-black">Have Question ?</h1>
+                    <p className="poppins text-black">Contact Us Now!</p>
                   </div>
                 </div>
               </div>
@@ -529,13 +529,13 @@ const Home = () => {
         <div className="flex justify-center relative">
         <img className="w-[820px]" src={homeImg} alt="" />
           <div className="absolute inset-0 flex flex-col items-center justify-center ">
-            <span className="text-2xl poppins font-bold">
+            <span className="text-2xl poppins font-bold text-black">
               Integrated with 100+ Tools You
             </span>
-            <span className="text-2xl poppins font-bold">
+            <span className=" text-black text-2xl poppins font-bold">
               Already Know & Love.
             </span>
-            <button className="text-white poppins text-sm bg-purple-500 p-3 mt-2 rounded-xl">View All Integrations</button>
+            <button className="text-white poppins text-sm bg-purple-500 p-3 mt-2 rounded-xl ">View All Integrations</button>
           </div>
         </div>
       </div>
@@ -558,8 +558,8 @@ const Home = () => {
       <div className="min-h-screen bg-white">
         <div className="question-section pl-56 pr-56 pt-20 flex flex-row items-center justify-between">
             <div className="left-section flex flex-col">
-                <span className="text-bold poppins text-4xl">Frequently Asked</span>
-                <span className="text-bold poppins text-4xl">Questions</span>
+                <span className="text-bold poppins text-4xl text-black">Frequently Asked</span>
+                <span className="text-bold poppins text-4xl text-black">Questions</span>
                 <span className="text-sm text-black pt-5">We have put together some commonly</span>
                 <span className="text-sm text-black ">asked question</span>
                 <button className="text-sm bg-purple-500 text-white p-3 mt-2 rounded-xl">Contact Us</button>
@@ -587,6 +587,7 @@ const Home = () => {
               </div>
       </div>
       <div className="footer">
+       
           <Footer/>
       </div>
     </>

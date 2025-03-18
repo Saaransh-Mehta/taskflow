@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 const Features = () => {
   return (
    <>
-   <Navbar/>
+   Comming Soon...............!!!!!!!!!!!!!!!!!
    </>
   )
 }

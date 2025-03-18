@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
     "@tabler/icons-react": "^3.30.0",
     "@webcontainer/api": "^1.5.1-internal.8",
     "axios": "^1.7.9",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gsap": "^3.12.7",
     "highlight.js": "^11.11.1",
@@ -29,11 +31,14 @@
     "react-syntax-highlighter": "^15.6.1",
     "remixicon": "^4.6.0",
     "socket.io-client": "^4.8.1",
-    "tailwind-merge": "^3.0.1",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7",
     "toast": "^0.5.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.10",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
@@ -45,6 +50,7 @@
     "globals": "^15.14.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.2",
     "vite": "^6.0.5"
   }
 }

@@ -69,7 +69,7 @@ export default function Footer() {
         {/* Bottom section */}
         <div className="mt-12 border-t border-gray-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between">
-            <p className="text-xs text-gray-500">Slick operates under the electrical licence No. 384909C</p>
+            <p className="text-xs text-gray-500">INLANCE :- Building Solution From 2025</p>
             <p className="text-xs text-gray-500">© 2025 All Rights Reserved</p>
           </div>
         </div>
