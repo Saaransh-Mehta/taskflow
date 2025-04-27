@@ -4,9 +4,10 @@ import { UserContext } from '../context/user.context.jsx'
 
 
 const ProjectDashboard = () => {
+  
 
   const {user} = useContext(UserContext)
-
+console.log(user.username)
   const [activeTab, setActiveTab] = useState('Overview')
   const [tasks, setTasks] = useState({
     todo: [

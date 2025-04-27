@@ -9,6 +9,7 @@ import Home from '../screens/Home'
 import Features from '../screens/Features'
 import Blogs from '../screens/Blogs'
 import ProjectDashboard from '../screens/ProjectDashboard'
+import AfterLoginNavbar from '../screens/AfterLoginNavbar'
 import Navbar from '../components/Navbar'
 
 const AppRoutes = () => {
@@ -24,7 +25,8 @@ const AppRoutes = () => {
     <Route path='/project' element={<UserAuth> <Project/> </UserAuth> }/>
     <Route path='/features' element={<Features/>} />
     <Route path='/blogs' element={<Blogs/>} />
-    <Route path='/project-dashboard' element={<ProjectDashboard/>} />
+    <Route path='/project-dashboard' element={<UserAuth><ProjectDashboard/></UserAuth>} />
+    <Route path="/navbar-2"  element={<AfterLoginNavbar/>} />
 
 
     </Routes>

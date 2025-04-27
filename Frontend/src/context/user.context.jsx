@@ -1,15 +1,18 @@
 import { createContext, useState } from 'react';
 
 const UserContext = createContext();
+const isLoggedIn = createContext(false)
 
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const login = (userData) => {
+    isLoggedIn(true)
     setUser(userData);
   };
 
   const logout = () => {
+    isLoggedIn(false)
     setUser(null);
   };
 
@@ -19,5 +22,6 @@ const UserProvider = ({ children }) => {
     </UserContext.Provider>
   );
 };
+
 
 export { UserProvider, UserContext };
