@@ -8,9 +8,7 @@ import {
   recieveMessage,
 } from "../config/socket.js";
 import { UserContext } from "../context/user.context.jsx";
-import hljs from 'highlight.js';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 
 const Project = () => {
   const [isSidePanelOpen, setIsSidePanelOpen] = useState(false);
@@ -28,18 +26,7 @@ const Project = () => {
   
   const [fileTree, setFileTree] = useState({});
 
-  function SyntaxHighLightedCode({ className, children }) {
-    const ref = useRef(null);
-  
-    useEffect(() => {
-      if (ref.current && className?.includes('lang-')) {
-        hljs.highlightElement(ref.current);
-        ref.current.removeAttribute('data-highlighted');
-      }
-    }, [className, children]);
-  
-    return <pre ref={ref} className={className}>{children}</pre>;
-  }
+ 
   
   const handleUserClick = (id) => {
     setSelectedUserId((prevSelectedUserId) => {

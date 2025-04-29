@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../App.css'
 import { MdAddTask } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../context/user.context.jsx';
 
 const Navbar = () => {
-
-const navigate = useNavigate()
+  const { isLoggedIn } = useContext(UserContext); 
+  const {user} = useContext(UserContext)
+  console.log(user)
+  const navigate = useNavigate();
+  
   return (
     <div className='flex justify-between items-center h-16 bg-white text-black relative shadow-sm roboto tracking-wide'>
       <div className='pl-14 flex gap-1 items-center cursor-pointer' >
@@ -22,8 +26,8 @@ const navigate = useNavigate()
         </ul>
       </div>
       <div className='pr-10 cursor-pointer flex gap-6'>
-        <button onClick={()=>navigate('/login')}>Login</button>
-        <button onClick={()=>navigate('/register')} className='bg-purple-600 text-white p-2 rounded-xl'>Signup</button>
+        {isLoggedIn ? <><div className='flex justify-center items-center text-black'>{user.email}</div></> : null}
+        {isLoggedIn ? <><button className='bg-red-500 hover:bg-red-600 p-3 rounded-xl duration-200'   onClick={()=>console.log("Logout Clicked")}>Logout</button></> : <> <button onClick={()=>navigate('/login')}>Login</button> <button onClick={()=>navigate('/register')} className='bg-purple-600 text-white p-2 rounded-xl'>Signup</button></>}
       </div>
     </div>
   )

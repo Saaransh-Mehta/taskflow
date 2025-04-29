@@ -1,27 +1,27 @@
 import { createContext, useState } from 'react';
 
+// Create a single context
 const UserContext = createContext();
-const isLoggedIn = createContext(false)
 
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const login = (userData) => {
-    isLoggedIn(true)
+    setIsLoggedIn(true);
     setUser(userData);
   };
 
   const logout = () => {
-    isLoggedIn(false)
+    setIsLoggedIn(false);
     setUser(null);
   };
 
   return (
-    <UserContext.Provider value={{ user, login, logout }}>
+    <UserContext.Provider value={{ user, login, logout, isLoggedIn }}>
       {children}
     </UserContext.Provider>
   );
 };
-
 
 export { UserProvider, UserContext };
