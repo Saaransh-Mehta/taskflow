@@ -16,7 +16,7 @@ const Dashboard = () => {
   };
 
   useEffect(()=>{
-    axios.get('/project/all').then((res)=>{
+    axios.get('http://localhost:5173/project/all').then((res)=>{
     console.log(res.data.allUserProjects[0].name)
       setProjects(res.data.allUserProjects)
     }).catch((err)=>{
@@ -28,7 +28,7 @@ const Dashboard = () => {
     e.preventDefault();
 
     console.log('Creating Project', name);
-    const response = await axios.post('/project/create',{
+    const response = await axios.post('http://localhost:5173/project/create',{
       name
     })
     .then((response) => {
